@@ -5,18 +5,20 @@
  <head>
     <meta charset="UTF-8">
     <title>User Info</title>
+    <link rel="stylesheet" href="css/style.css">
  </head>
  <body>
  
     <jsp:include page="_header.jsp"></jsp:include>
     <jsp:include page="_menu.jsp"></jsp:include>
+    <div class="section">
  
     <h3>Hello: ${user.userName}</h3>
  
     User Name: <b>${user.userName}</b>
     <br />
-    Gender: ${user.gender } <br />
- 
+    Gender: ${user.gender} <br />
+    </div>
     <jsp:include page="_footer.jsp"></jsp:include>
  
  </body>

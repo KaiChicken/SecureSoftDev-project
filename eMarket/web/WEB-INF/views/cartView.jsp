@@ -7,46 +7,57 @@
  <head>
     <meta charset="UTF-8">
     <title>Cart</title>
+    <link rel="stylesheet" href="css/style.css">
  </head>
- <body>
- 
+ <body >
     <jsp:include page="_header.jsp"></jsp:include>
     <jsp:include page="_menu.jsp"></jsp:include>
- 
+    
+    <div class="section">
+    <style type="text/css">
+        input.submit{
+        backgroun-image:url(button_home.png);
+        width: 100px;
+        height: 50px;
+        border: 0;
+        }
+    </style>
+    <form action="checkoutView.jsp">
+        <input type="submitt" value="" class="submit">
+    </form>
+    
     <h3>Cart</h3>
     
     <p style="color: red;">${errorString}</p>
  
-    
- 
     <table border="1" cellpadding="5" cellspacing="1" >
-       <tr>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Units</th>
-          <th>Total</th>
-       </tr>
-       <c:forEach items="${cart}" var="product" >
-          <tr>
-             <td>${product.bookName}</td>
-             <td>${product.unitPrice}</td>
-             <td>${product.units}</td>
-             <td>${product.total}</td>
-          </tr>
-       </c:forEach>
-          <tr>
-              <td></td>
-              <td></td>
-              <td>Total</td>
-              <td>
-              <%
-                  Cart cart = (Cart) session.getAttribute("cart");
-                  float ttc = cart.getTotal();
-                  out.print(ttc);
-                  %>
-                  
-              </td>
-          </tr>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Units</th>
+            <th>Total</th>
+        </tr>
+        <c:forEach items="${cart}" var="product" >
+            <tr>
+                <td>${product.bookName}</td>
+                <td>${product.unitPrice}</td>
+                <td>${product.units}</td>
+                <td>${product.total}</td>
+            </tr>
+        </c:forEach>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Total</td>
+                <td>
+                <%
+                Cart cart = (Cart) session.getAttribute("cart");
+                float ttc = cart.getTotal();
+                out.print(ttc);
+                %>
+
+                </td>
+            </tr>
     </table>
                   <br>
                   <hr>
@@ -111,6 +122,7 @@
             
         </form>
     </div>
+            </div>
  
     <jsp:include page="_footer.jsp"></jsp:include>
  

@@ -5,12 +5,13 @@
   <head>
      <meta charset="UTF-8">
      <title>Checkout</title>
+     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
  
      <jsp:include page="_header.jsp"></jsp:include>
      <jsp:include page="_menu.jsp"></jsp:include>
-    
+     <div class="section">
       <h3>Checkout</h3>
       
       <b>
@@ -36,7 +37,7 @@
           </li>
       </ul>
     </c:out>
-  
+  </div>
  
      <jsp:include page="_footer.jsp"></jsp:include>
  

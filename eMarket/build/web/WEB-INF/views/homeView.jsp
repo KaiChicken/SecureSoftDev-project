@@ -5,13 +5,15 @@
   <head>
      <meta charset="UTF-8">
      <title>Home Page</title>
+     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
  
      <jsp:include page="_header.jsp"></jsp:include>
      <jsp:include page="_menu.jsp"></jsp:include>
     
-      <h3>Home Page</h3>
+     <div class="section">
+         <h3>Home Page</h3>
       
       This is demo Simple web application using jsp,servlet &amp; Jdbc. <br><br>
       <b>It includes the following functions:</b>
@@ -23,6 +25,11 @@
          <li>Edit Product</li>
          <li>Delete Product</li>
       </ul>
+         
+     </div>
+     
+     
+      
  
      <jsp:include page="_footer.jsp"></jsp:include>
  

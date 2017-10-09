@@ -5,16 +5,18 @@
    <head>
       <meta charset="UTF-8">
       <title>Login</title>
+      <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
       <jsp:include page="_header.jsp"></jsp:include>
       <jsp:include page="_menu.jsp"></jsp:include>
+      <div class="section">
  
       <h3>Login Page</h3>
       <p style="color: red;">${errorString}</p>
  
  
-      <form method="POST" action="${pageContext.request.contextPath}/login">
+      <form method="POST" class="form-module" action="${pageContext.request.contextPath}/login">
          <table border="0">
             <tr>
                <td>User Name</td>
@@ -36,6 +38,7 @@
             </tr>
          </table>
       </form>
+      </div>
  
  
       <jsp:include page="_footer.jsp"></jsp:include>

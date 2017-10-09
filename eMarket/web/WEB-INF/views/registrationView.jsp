@@ -7,11 +7,13 @@
    <head>
       <meta charset="UTF-8">
       <title>Create Product</title>
+      <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
     
       <jsp:include page="_header.jsp"></jsp:include>
       <jsp:include page="_menu.jsp"></jsp:include>
+      <div class="section">
        
       <h3>Sign Up</h3>
        
@@ -71,7 +73,7 @@
             
          </table>
       </form>
-       
+      </div>
       <jsp:include page="_footer.jsp"></jsp:include>
        
    </body>
